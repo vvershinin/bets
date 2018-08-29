@@ -1,0 +1,83 @@
+@import "../../styles/utils";
+@import "../../styles/global";
+
+/**
+ * Main sections positioning
+*/
+
+html,
+body {
+    height: 100%;
+    background-color: $grayF7;
+}
+
+#__next,
+main,
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    flex: 1 0 auto;
+}
+
+.page {
+    display: flex;
+    flex-flow: column;
+    min-height: 100%;
+    flex: 1 0 auto;
+
+    .pushable {
+        display: flex;
+        flex: 1 0 auto;
+        transform: inherit;
+    }
+
+    .pusher {
+        display: flex;
+        flex-flow: row nowrap;
+        flex: 1;
+    }
+
+    .content {
+        margin: 0;
+        flex: 1 0 100%;
+    }
+}
+
+.main-content {
+    display: flex;
+    flex-flow: row;
+    height: 100%;
+    padding-left: 0;
+    padding-bottom: 0;
+
+    &.isSticked {
+        padding-top: 80px;
+    }
+
+    &__left-side {
+        max-width: 286px;
+        width: 100%;
+        display: none;
+    }
+
+    &__center {
+        flex: 1;
+        width: 100%;
+        min-height: 300px;
+    }
+}
+
+@media #{$lg-viewport} {
+    .main-content {
+        padding-left: 20px;
+
+        &__left-side {
+            display: block;
+        }
+    }
+
+    .page .content {
+        flex: 1;
+    }
+}

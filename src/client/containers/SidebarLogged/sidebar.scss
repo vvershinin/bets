@@ -1,0 +1,69 @@
+/** SidebarLogged **/
+@import "../../styles/utils";
+
+.sidebar {
+    &.sidebar--right {
+        overflow-y: visible !important;
+    }
+
+    &--right {
+        .nav-toggle {
+            display: inline-block;
+        }
+
+        &.visible {
+            left: -300px;
+        }
+    }
+
+    @media #{$lg-viewport} {
+        &--right {
+            .nav-toggle {
+                display: none;
+            }
+        }
+    }
+}
+
+.sidebarBlock {
+    width: 295px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    box-shadow: -3px 0 15px 0 rgba($black, 0.5);
+    background-color: $white;
+    border: solid 1px $grayD8;
+    border-top: none;
+    border-bottom: none;
+    overflow: hidden;
+}
+
+.settings,
+.notifications {
+    @extend .sidebarBlock;
+
+    &List {
+        position: relative;
+        padding: 0 21px 17px !important;
+        height: calc(100% - 58px);
+        overflow: auto;
+    }
+
+    &Label {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: left;
+        padding: 17px 22px;
+        color: $font-color;
+    }
+}
+
+@media #{$mobile-viewport} {
+    .sidebarBlock {
+        right: 0;
+        left: 0;
+        width: auto;
+        z-index: 2002;
+    }
+}

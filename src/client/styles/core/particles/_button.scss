@@ -1,0 +1,118 @@
+/**
+ * Button
+*/
+
+@import "~semantic-ui-css/components/button.min.css";
+@import "./../../utils";
+
+.ui.btn {
+    height: 50px;
+    border: 1px solid $gray;
+    border-radius: 25px;
+    background-color: $white;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 121px;
+    color: $darkGray;
+    font-family: $font-family-roboto;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 48px;
+    transition: $mobile-nav-animation-time background-color ease;
+
+    &:hover,
+    &.active {
+        background-color: $green;
+        border-color: $green;
+        color: $white !important;
+    }
+
+    &Icon {
+        display: inline-block !important;
+        margin: 0 10px 0 0;
+    }
+
+    &Sm {
+        height: 30px;
+        width: 60px;
+        border-radius: 20px;
+        line-height: 28px;
+        font-size: 12px;
+    }
+
+    &FullWidth {
+        width: 100%;
+    }
+
+    &Support {
+        background-color: $gray3C;
+        height: 50px;
+        line-height: 48px;
+        width: 260px;
+        border-radius: 6px;
+        border: none;
+        color: $white;
+    }
+
+    &Submit {
+        height: 60px;
+        border-radius: 40px;
+        font-family: $font-family-roboto;
+        color: $white;
+        background: linear-gradient(175.75deg, #ffd102 0%, #ff6f00 100%);
+        box-shadow: 0 4px 2px 0 rgba(255, 65, 65, 0.09);
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 25px;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 0 1px 1px 0 rgba($white, 0.3);
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $white;
+            background: linear-gradient(175.75deg, #ffd102 0%, #ff6f00 100%);
+        }
+    }
+}
+
+.BtnClose {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    float: right;
+    margin-top: 3px;
+
+    @include transition();
+
+    &:hover {
+        transform: rotate(180deg);
+    }
+
+    &::after {
+        content: '';
+        width: 18px;
+        height: 2px;
+        position: absolute;
+        top: 6px;
+        left: 0;
+        background-color: $gray8F;
+        transform: rotate(45deg);
+    }
+
+    &::before {
+        content: '';
+        width: 18px;
+        height: 2px;
+        position: absolute;
+        top: 6px;
+        left: 0;
+        background-color: $gray8F;
+        transform: rotate(-45deg);
+    }
+}

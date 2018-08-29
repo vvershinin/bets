@@ -1,0 +1,103 @@
+@import "../../styles/utils";
+
+.topNewsBlock {
+    .topNewsHeader {
+        color: $font-color;
+        font-family: $font-family-base;
+        font-size: 18px;
+        margin: 0 0 13px;
+        font-weight: bold;
+        line-height: 21px;
+    }
+
+    .topNewsList {
+        //
+    }
+
+    .topNewsItem {
+        //
+    }
+
+    .topNews {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        border-radius: $base-border-radius;
+        background-color: $white;
+        box-shadow: $box-shadow;
+        min-height: 287px;
+        margin: 0 0 30px;
+
+        &Wrap {
+            padding: 15px 20px;
+            overflow: hidden;
+        }
+
+        &Image,
+        &ImageWrap {
+            position: relative;
+            min-height: 171px;
+            background: $gray;
+        }
+
+        &Video {
+            position: absolute;
+            left: 0;
+            right: 0;
+            opacity: 0.45;
+            top: calc(50% - 117px/2); // stylelint-disable-line
+            margin: 0 auto;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 50px;
+            line-height: 50px;
+            color: $white;
+            cursor: pointer;
+
+            @include transition();
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &Comments {
+            position: relative;
+            bottom: auto;
+            right: auto;
+            float: right;
+        }
+
+        &Meta {
+            line-height: 24px;
+            vertical-align: center;
+            padding: 0 0 15px;
+
+            @include cf();
+        }
+
+        &GameLogo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        &Date {
+            color: #bac4cb;
+            font-family: $font-family-base;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 16px;
+        }
+
+        &ShortText {
+            color: $font-color;
+            font-family: $font-family-base;
+            font-size: $font-family-base;
+            font-weight: bold;
+            line-height: 22px;
+        }
+    }
+}

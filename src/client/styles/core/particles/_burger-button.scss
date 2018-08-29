@@ -1,0 +1,101 @@
+@import "../variables";
+
+// Burger Menu
+.nav-toggle {
+    height: 31px;
+    width: 22px;
+    padding: 0 !important;
+    margin: 0 10px 0 0 !important;
+    z-index: 2001;
+    cursor: pointer;
+    text-decoration: none;
+    background: transparent !important;
+
+    &.active i {
+        &::before,
+        &::after {
+            background: $black;
+        }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        outline: none;
+        border-bottom: none !important;
+    }
+
+    i {
+        top: -6px;
+        position: relative;
+        display: inline-block;
+        width: 22px;
+        height: 3px;
+        font: bold 14px/0.4 Helvetica;
+        text-transform: uppercase;
+        text-indent: -55px;
+        background: $white;
+        transition: all 0.2s ease-out;
+
+        &::before,
+        &::after {
+            content: '';
+            width: 22px;
+            height: 3px;
+            background: $white;
+            position: absolute;
+            left: 0;
+            transition: all 0.2s ease-out;
+        }
+
+        &::before {
+            top: -7px;
+        }
+
+        &::after {
+            bottom: -7px;
+        }
+    }
+
+    &.nav-white {
+        > i {
+            color: #fff;
+            background: #000;
+
+            &::before,
+            &::after {
+                background: #000;
+            }
+        }
+    }
+
+    @media #{$mobile-viewport} {
+        // 768
+    }
+
+    @media #{$lg-viewport} {
+        // 1024
+    }
+}
+
+.nav-toggle:hover i::before {
+    top: -10px;
+}
+
+.nav-toggle:hover i::after {
+    bottom: -10px;
+}
+
+.nav-toggle.active i {
+    background: transparent;
+}
+
+.nav-toggle.active i::before {
+    top: 0;
+    transform: rotateZ(45deg);
+}
+
+.nav-toggle.active i::after {
+    bottom: 0;
+    transform: rotateZ(-45deg);
+}

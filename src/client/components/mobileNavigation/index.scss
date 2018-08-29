@@ -1,0 +1,117 @@
+@import "../../styles/utils";
+
+.slideWindow {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: $zindex-slide;
+
+    &Wrapper {
+        padding: 0 20px;
+        width: 260px;
+        margin: 0 auto;
+    }
+
+    &Header {
+        width: 100%;
+        height: 60px;
+        background-color: $darkGray;
+        color: $white;
+        line-height: 60px;
+        font-weight: bold;
+        font-family: $font-family-roboto;
+        display: flex;
+        align-items: center;
+    }
+
+    &Text {
+        flex: 1;
+        text-align: center;
+    }
+
+    &CloseBtn {
+        margin: 0 10px !important;
+
+        i {
+            &::after,
+            &::before {
+                background: $white !important;
+            }
+        }
+    }
+
+    .social-icons .socialLink {
+        width: 40px;
+        height: 40px;
+
+        i {
+            line-height: 30px;
+            font-size: 20px;
+        }
+    }
+}
+
+.footerMobileNav {
+    position: fixed;
+    z-index: $zindex-footer-navbar;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-flow: row nowrap;
+
+    &Item {
+        flex: 1;
+        height: 60px;
+        // box-shadow: $box-shadow;
+        text-align: center;
+        display: flex;
+        flex-flow: row nowrap;
+        cursor: pointer;
+        user-select: none;
+
+        &.betsNav {
+            background-color: $gray;
+        }
+
+        &.couponNav {
+            background-color: $orange;
+        }
+
+        &.logInNav {
+            background-color: $gray;
+        }
+
+        &.registrationNav {
+            background-color: $green;
+        }
+    }
+
+    &Text {
+        flex: 1 1 100%;
+        display: inline-block;
+        color: $white;
+        font-family: $font-family-roboto;
+        font-size: $base-font-size;
+        font-weight: bold;
+        line-height: 60px;
+    }
+
+    &Count {
+        flex: 1 1 50px;
+        display: inline-block;
+        color: $white;
+        font-family: $font-family-roboto;
+        font-size: $base-font-size;
+        font-weight: bold;
+        line-height: 60px;
+        opacity: 0.5;
+    }
+
+    @media #{$lg-viewport} {
+        display: none;
+    }
+}

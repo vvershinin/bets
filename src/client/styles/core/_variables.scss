@@ -1,0 +1,101 @@
+// Grid
+
+$sm-screen-min: 320;
+
+$md-screen-min: 768;
+$lg-screen-min: 1024;
+$xl-screen-min: 1400;
+
+$mobile-viewport: "(max-width: #{$lg-screen-min - 1}px)";
+$sm-viewport: "only screen and (min-width: #{$sm-screen-min}px)";
+$md-viewport: "only screen and (min-width: #{$md-screen-min}px)";
+$lg-viewport: "only screen and (min-width: #{$lg-screen-min}px)";
+$xl-viewport: "only screen and (min-width: #{$xl-screen-min}px)";
+
+$gutter-width: 30px;
+$mobile-gutter-reduce: 8px;
+$half-gutter-width: $gutter-width * 0.5;
+$gutter-compensation: ($gutter-width * 0.5) * -1; //+
+
+$grid-columns: 12;
+
+// Colors
+
+/**
+    darkerColor
+    darkColor
+    Color
+    Color33
+    ColorAA
+    Color3E
+    lightColor
+    lighterColor
+ */
+
+$white:             #fff;
+$black:             #000;
+$orange:            #ff7500;
+$green:             #60c316;
+
+// white/gray
+$grayF7:            #f7f7f7;
+$grayF1:            #f1f1f1;
+$grayEE:            #eee;
+$grayE7:            #e7e7e7;
+$grayEB:            #ebebeb;
+$grayD8:            #d8d8d8;
+$gray:              #bac4cb;
+$grayCE:            #cecece;
+$grayBC:            #bcbcbc;
+$gray9A:            #9a9a9a;
+$gray97:            #979797;
+$gray8F:            #8f8f8f;
+$gray83:            #838383;
+$gray73:            #737373;
+$gray62:            #626262;
+$darkGray:          #4b5961;
+$gray4C:            #4c4c4c;
+$gray3C:            #3c3c3c;
+$gray2B:            #2b2b2b;
+$gray21:            #212121;
+
+// red
+$red:               #d6492f;
+
+// blue
+$lighterBlue:       #629ee5;
+$lightBlue:         #598dca;
+$light2Blue:        #007ab9;
+$blue:              #3a589b;
+
+// Sizes
+$base-font-size: 16px;
+$base-line-height: 24px;
+$base-border-radius: 6px;
+
+// Fonts
+// -------------------------------
+$font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-roboto: "Roboto", Helvetica, Arial, serif;
+$font-color:        $gray21;
+// -------------------------------
+
+// Animation
+// -------------------------------
+$mobile-nav-animation-time: 0.4s;
+// -------------------------------
+
+$box-shadow:        0 0 11px 2px #e9eaea;
+$shadow-sidebar:    0 1px 10px -1px rgba(#000, 0.13);
+
+//-- Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+//
+// Note: These variables are not generated into the Customizer.
+
+$zindex:                    1000 !default;
+$zindex-navbar:             1010 !default;
+$zindex-footer-navbar:      1020 !default;
+$zindex-slide:              1030 !default;

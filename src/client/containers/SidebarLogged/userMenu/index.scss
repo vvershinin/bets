@@ -1,0 +1,117 @@
+@import "../../../styles/utils";
+
+.userMenu {
+    position: relative;
+
+    .userInfo {
+        background-color: $grayEE;
+        padding-bottom: 17px;
+        border-bottom: solid 1px $gray97;
+
+        &Bar {
+            height: 40px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: stretch;
+            align-items: center;
+            text-align: left;
+            border-bottom: 1px solid $gray97;
+        }
+
+        &TimeZone {
+            flex: 1;
+            margin-left: 10px;
+        }
+
+        &Notification {
+            flex: 0 0 25px;
+            margin: 0 5px;
+        }
+
+        &Settings {
+            flex: 0 0 25px;
+            margin: 0 5px;
+        }
+
+        &CloseBtn {
+            flex: 0 0 25px;
+            position: relative;
+            top: 3px;
+            right: 3px;
+        }
+    }
+
+    .userProfile {
+        display: flex;
+        flex-flow: row;
+        justify-content: stretch;
+        padding: 17px 16px;
+
+        &Wrapp {
+            padding-left: 15px;
+        }
+
+        &Image {
+            width: 60px;
+            height: 60px;
+            background-color: $grayD8;
+            border: solid 1px $gray97;
+            border-radius: 50%;
+        }
+
+        &Name {
+            font-size: 16px;
+            font-weight: bold;
+            color: $font-color;
+        }
+
+        &Email {
+            opacity: 0.59;
+            font-size: 13px;
+            color: $font-color;
+        }
+    }
+
+    .userBalance {
+        display: flex;
+        flex-flow: row;
+        justify-content: stretch;
+        padding: 0 13px 17px;
+
+        &Label {
+            text-align: left;
+            flex: 1;
+            opacity: 0.59;
+            color: $font-color;
+        }
+
+        &Amount {
+            flex: 1;
+            display: inline-block;
+            font-size: 30px;
+            font-weight: bold;
+            color: $font-color;
+        }
+    }
+
+    .userBets {
+        .menu .item {
+            text-align: center !important;
+            color: $font-color;
+            font-weight: bold;
+            opacity: 0.66;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .userButton {
+        text-align: center;
+
+        &Cashbox {
+            margin-right: 7px;
+        }
+    }
+}

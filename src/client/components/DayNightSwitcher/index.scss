@@ -1,0 +1,74 @@
+@import "../../styles/utils";
+
+.dayNightSwitcher {
+    position: relative;
+    top: 3px;
+    display: inline-block;
+    width: 49px;
+    height: 26px;
+    border-radius: 13px;
+    background-color: #f5f5f5;
+    border: solid 1px #979797;
+    backface-visibility: hidden;
+    overflow: hidden;
+    vertical-align: baseline;
+    outline: 0;
+
+    &Checkbox {
+        display: none;
+
+        &:checked + label {
+            background-color: #000;
+        }
+
+        &:checked + label::before {
+            transform: translateX(21px);
+        }
+
+        &:focus + label {
+            box-shadow: 0 0 1px #000;
+        }
+    }
+
+    &Label {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 13px;
+        background-color: #f5f5f5;
+        transition: 0.4s;
+
+        &::before {
+            position: absolute;
+            content: "";
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: #d8d8d8;
+            border: solid 1px #979797;
+            top: 2px;
+            left: 3px;
+            transition: 0.4s;
+        }
+    }
+
+    &Img {
+        position: absolute !important;
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+
+        &Day {
+            top: 6px;
+            left: 7px;
+        }
+
+        &Night {
+            top: 6px;
+            left: 28px;
+        }
+    }
+}

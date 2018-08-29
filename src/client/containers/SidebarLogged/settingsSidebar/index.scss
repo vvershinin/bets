@@ -1,0 +1,33 @@
+@import "../../../styles/utils";
+
+.settings {
+    &Item {
+        padding: 0 0 20px !important;
+        text-align: left;
+        vertical-align: top;
+        overflow: hidden;
+
+        @include transition();
+
+        &:hover {
+            padding: 0 0 20px 10px !important;
+        }
+    }
+
+    &Link {
+        text-align: left;
+        margin-left: 10px;
+        display: inline-block !important;
+        width: calc(100% - 30px);
+        border-bottom: solid 2px $grayD8;
+        color: $font-color;
+    }
+
+    &Icon {
+        display: inline-block;
+        float: left;
+        margin: 5px 0 0;
+        width: 20px;
+        //transform: scale(0.5);
+    }
+}

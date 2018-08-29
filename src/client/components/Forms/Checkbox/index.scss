@@ -1,0 +1,69 @@
+@import "./../../../styles/utils";
+
+.inputCheckbox {
+    position: relative;
+    line-height: 22px;
+    margin-bottom: 24px;
+
+    &Input {
+        display: none;
+    }
+
+    &Check {
+        display: block;
+        opacity: 0;
+        width: 10px;
+        height: 13px;
+        fill: $orange;
+        position: absolute;
+        top: 4px;
+        left: 5px;
+        transition: 0.3s ease all;
+    }
+
+    &Label {
+        user-select: none;
+        cursor: pointer;
+        color: $font-color;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    span {
+        position: absolute;
+        font-size: 12px;
+        color: $red;
+        top: 100%;
+        width: 100%;
+        display: block;
+    }
+
+    &Input + &Label::before {
+        content: '';
+        -webkit-appearance: none;
+        height: 20px;
+        width: 20px;
+        border: 2px solid $gray;
+        border-radius: 4px;
+        display: inline-block;
+        position: relative;
+        vertical-align: -3px;
+        margin-right: 10px;
+    }
+
+    &Input:checked + &Label::before {
+        border-color: $orange;
+    }
+
+    &Input:checked + &Label {
+        .inputCheckboxCheck {
+            display: block;
+        }
+    }
+
+    &Input:checked + &Label {
+        .inputCheckboxCheck {
+            opacity: 1;
+        }
+    }
+}

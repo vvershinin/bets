@@ -1,0 +1,7 @@
+@import "clearfix";
+@import "grid";
+@import "./../variables";
+
+@mixin transition($rule: all, $time: $mobile-nav-animation-time, $type: ease) {
+    transition: $rule $time $type;
+}

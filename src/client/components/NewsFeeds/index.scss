@@ -1,0 +1,78 @@
+@import "../../styles/utils";
+
+.newsList {
+    &Title {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 13px;
+        color: $font-color;
+    }
+
+    &Wrap {
+        box-shadow: $box-shadow;
+        background-color: $white;
+        border-radius: $base-border-radius;
+        padding: 21px;
+        margin-bottom: 30px;
+    }
+
+    .news {
+        position: relative;
+        padding-left: 38px;
+        margin-bottom: 21px;
+        border-bottom: 1px solid rgba($gray, 0.3);
+
+        @include cf();
+
+        &Icon {
+            position: relative;
+            float: right;
+            bottom: auto;
+            right: auto;
+        }
+
+        &Image {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        &Meta {
+            display: block;
+
+            @include cf();
+        }
+
+        &Date {
+            color: $gray;
+            font-family: $font-family-base;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 24px;
+        }
+
+        &ShortDesc {
+            color: $font-color;
+            font-family: $font-family-base;
+            font-size: 14px;
+            line-height: 21px;
+            padding: 0 0 17px;
+        }
+    }
+
+    @media #{$mobile-viewport} {
+        // 768px
+    }
+
+    @media #{$md-viewport} {
+        // 768px
+    }
+
+    @media #{$lg-viewport} {
+        // 1024px
+    }
+
+    @media #{$xl-viewport} {
+        // 1400px
+    }
+}

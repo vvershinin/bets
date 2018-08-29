@@ -1,0 +1,215 @@
+@import "../../styles/utils";
+
+.top3News {
+    min-height: 200px;
+    padding-top: 16px;
+
+    .image {
+        width: 100%;
+        height: auto;
+    }
+
+    &Main {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        height: 200px;
+        background: $gray;
+        border-radius: $base-border-radius;
+        margin: 0 0 27px;
+
+        &.detailsPage {
+            border-radius: 0;
+            margin: 0;
+
+            .top3NewsMainWrapMeta {
+                padding: 20px;
+            }
+
+            .top3NewsMainTitle {
+                max-height: 230px;
+                font-size: 16px;
+                line-height: 21px;
+            }
+        }
+
+        .commentCount {
+            display: none;
+        }
+
+        .gameLabel {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .top3News &Video {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 45%;
+            margin: 0 auto;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 50px;
+            line-height: 50px;
+            color: $white;
+            cursor: pointer;
+            opacity: 0.45;
+
+            @include transition();
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &Title {
+            font-family: $font-family-base;
+            max-height: 200px;
+            overflow: hidden;
+            color: $white;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 21px;
+        }
+
+        &WrapMeta {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(180deg, transparent 0%, $black  100%);
+            max-height: 120px;
+            padding: 10px;
+        }
+
+        &Date {
+            color: $white;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 16px;
+        }
+    }
+
+    &Sub {
+        position: relative;
+        overflow: hidden;
+        height: 200px;
+        background: linear-gradient(180deg, transparent 0%, $black  100%);
+        background: $gray;
+        border-radius: $base-border-radius;
+        margin: 0 0 27px;
+        display: none;
+
+        .top3News &Video {
+            position: absolute;
+            left: 0;
+            right: 0;
+            opacity: 0.45;
+            top: 45%;
+            margin: 0 auto;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 50px;
+            line-height: 50px;
+            color: $white;
+            cursor: pointer;
+            z-index: $zindex;
+
+            @include transition();
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        .gameLabel {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        &Title {
+            margin: 0;
+            position: absolute;
+            padding: 23px 20% 23px 30px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(180deg, transparent 0%, $black  100%);
+            font-family: $font-family-base;
+            color: $white;
+            font-size: 22px;
+            line-height: 30px;
+            font-weight: bold;
+        }
+    }
+
+    @media #{$sm-viewport} {
+        // 320px
+    }
+
+    @media #{$lg-viewport} {
+        // 1024px
+        padding-top: 32px;
+
+        &.detailsPage {
+            padding-top: 0;
+        }
+
+        &Main {
+            height: 430px;
+
+            .commentCount {
+                display: block;
+            }
+
+            &WrapMeta {
+                padding: 23px 20% 23px 30px;
+                max-height: inherit;
+            }
+
+            &Title {
+                font-size: 30px;
+                line-height: 44px;
+            }
+
+            &.detailsPage {
+                padding-top: 0;
+
+                .top3NewsMainTitle {
+                    font-size: 38px;
+                    line-height: 50px;
+                }
+
+                .top3NewsMainWrapMeta {
+                    max-height: inherit;
+                }
+            }
+
+            .gameLabel {
+                top: 30px;
+                left: 30px;
+            }
+        }
+
+        &Sub {
+            .gameLabel {
+                top: 30px;
+                left: 30px;
+            }
+        }
+    }
+
+    @media #{$xl-viewport} {
+        // 1400px
+        &Sub {
+            display: block;
+        }
+    }
+}

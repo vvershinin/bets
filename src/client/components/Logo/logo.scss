@@ -1,0 +1,36 @@
+@import "../../styles/utils";
+
+.logo {
+    width: auto;
+    height: auto;
+    display: block;
+
+    &:hover {
+        color: $orange;
+    }
+
+    &Image {
+        width: 100px;
+        height: auto;
+    }
+
+    &Slogan {
+        font-family: $font-family-base;
+        font-size: 36px;
+        color: $orange;
+        line-height: 44px;
+    }
+
+    @media #{$mobile-viewport} {
+        // 768
+    }
+
+    @media #{$lg-viewport} {
+        // 1024
+        margin-left: 20px;
+
+        .logoImage {
+            width: 270px;
+        }
+    }
+}

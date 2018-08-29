@@ -1,0 +1,43 @@
+@import "../../styles/utils";
+
+.loader {
+    display: block;
+    text-align: center;
+
+    &.loaderFeed {
+        .loaderIcon.icon {
+            display: inline-block;
+            height: 26px;
+            width: 26px;
+            line-height: 26px;
+            font-size: 11px;
+            background-color: $gray;
+            box-shadow: $box-shadow;
+        }
+
+        .loaderText {
+            display: inline-block !important;
+            line-height: 26px;
+        }
+    }
+
+    &Icon.icon {
+        display: inline-block !important;
+        height: 54px;
+        width: 54px;
+        line-height: 54px;
+        color: $white;
+        border-radius: 50%;
+        background-color: $gray;
+        box-shadow: $box-shadow;
+    }
+
+    &Text {
+        display: none;
+        line-height: 54px;
+        color: $gray;
+        font-family: $font-family-base;
+        font-size: $base-font-size;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,53 @@
+@import "../../styles/utils";
+
+.loginComponent {
+    padding: 0 20px;
+
+    &Title {
+        margin-bottom: 20px;
+        color: $font-color;
+        font-family: $font-family-roboto;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    &Status {
+        color: red;
+        font-size: 12px;
+        word-wrap: break-word;
+    }
+
+    &Success {
+        color: green;
+    }
+}
+
+.socialLogin {
+    &Btn {
+        outline: none;
+        border: none;
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+        line-height: 36px;
+        color: rgb(255, 255, 255);
+        background: rgb(60, 60, 60);
+        border-radius: 50%;
+        padding: 4px 8px;
+        transition: all 0.4s ease;
+        cursor: pointer;
+        margin-right: 9px;
+
+        &Google {
+            background: $red;
+        }
+
+        &Facebook {
+            background: $blue;
+        }
+
+        i {
+            font-size: 24px;
+        }
+    }
+}

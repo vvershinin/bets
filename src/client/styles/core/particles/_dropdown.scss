@@ -1,0 +1,11 @@
+@import "~semantic-ui-css/components/dropdown.min.css";
+
+.ui.dropdown {
+    .menu {
+        right: 0;
+        left: auto;
+        border-radius: 0;
+        border: solid 1px #979797;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+    }
+}

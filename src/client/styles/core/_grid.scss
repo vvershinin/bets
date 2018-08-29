@@ -1,0 +1,77 @@
+/**
+ * Grid Styles
+*/
+//@import "~semantic-ui-css/components/container.min.css";
+//@import "~semantic-ui-css/components/grid.min.css";
+
+/**
+ * Grid Styles
+*/
+
+.container-fluid,
+.container {
+    padding-right: $gutter-width - $mobile-gutter-reduce;
+    padding-left: $gutter-width - $mobile-gutter-reduce;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex: 0 1 auto;
+    flex-flow: row wrap;
+    margin-right: $gutter-compensation;
+    margin-left: $gutter-compensation;
+}
+
+.row {
+    &.reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+.col {
+    &.reverse {
+        flex-direction: column-reverse;
+    }
+}
+
+[class*='col-'],
+.col {
+    flex: 0 0 auto;
+    padding-right: $half-gutter-width;
+    padding-left: $half-gutter-width;
+    width: 100%;
+}
+
+// Main Grid columns
+@include make-grid-columns();
+
+// Small Grid columns
+@media #{$sm-viewport} {
+    @include make-grid-columns($infix: 'sm');
+}
+
+// Medium Grid columns
+@media #{$md-viewport} {
+    .container-fluid,
+    .container {
+        padding-right: $gutter-width;
+        padding-left: $gutter-width;
+    }
+
+    @include make-grid-columns($infix: 'md');
+}
+
+// Large Grid columns
+@media #{$lg-viewport} {
+    @include make-grid-columns($infix: 'lg');
+}
+
+// Extra large Grid columns
+@media #{$xl-viewport} {
+    @include make-grid-columns($infix: 'xl');
+}

@@ -1,0 +1,38 @@
+@import '../../styles/utils';
+
+.badge {
+    display: inline-block;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    cursor: pointer;
+
+    .active .badgeIcon {
+        color: $lighterBlue;
+    }
+
+    &Icon {
+        @include transition();
+
+        &:hover {
+            color: $lighterBlue;
+        }
+    }
+
+    &Number {
+        width: 17px;
+        height: 17px;
+        background-color: $gray83;
+        border: solid 1px $white;
+        border-radius: 50%;
+        position: absolute;
+        top: -3px;
+        right: -8px;
+        line-height: 15px;
+        font-size: 12px;
+        text-align: center;
+        color: $white;
+    }
+}

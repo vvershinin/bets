@@ -1,0 +1,219 @@
+/** Footer **/
+@import "../../styles/utils";
+
+.footer {
+    min-height: 384px;
+    background-color: $gray21;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    flex: 0 0 auto;
+    padding: 30px 0 90px;
+
+    &__wrapper {
+        padding: 0 22px;
+    }
+
+    &__payment-icon {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    .links {
+        display: flex;
+        flex-flow: row-reverse;
+
+        &__items {
+            width: 100%;
+        }
+
+        &__items--support-btn {
+            text-align: center;
+        }
+
+        &__items--nav-links {
+            display: none;
+        }
+    }
+
+    .socialIcons {
+        width: 260px;
+        display: inline-block;
+        margin-top: 36px;
+    }
+
+    .social-icons {
+        .social-icon {
+            background-color: $gray3C !important;
+        }
+
+        i {
+            color: $gray;
+        }
+    }
+
+    .nav-link {
+        float: left;
+        width: 50%;
+        padding: 0;
+        margin: 0;
+
+        &__item {
+            a {
+                text-decoration: none;
+                font-family: $font-family-roboto;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 14px;
+                line-height: 24px;
+                color: $gray !important;
+            }
+        }
+    }
+
+    .payment-icon {
+        &__item {
+            margin: 0 20px !important;
+        }
+    }
+
+    .payment-img {
+        &--visa {
+            width: 55px;
+            height: 28px;
+        }
+
+        &--mastercard {
+            width: 110px;
+            height: 28px;
+        }
+
+        &--union-pay {
+            width: 44px;
+            height: 28px;
+        }
+
+        &--yandex {
+            width: 107px;
+            height: 28px;
+        }
+
+        &--qiwi {
+            width: 72px;
+            height: 28px;
+        }
+
+        &--webmoney {
+            width: 110px;
+            height: 28px;
+        }
+    }
+
+    .copyright {
+        font-size: 14px;
+        color: $gray9A;
+    }
+
+    .footerMobileNav {
+        position: fixed;
+        z-index: $zindex-footer-navbar;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-flow: row nowrap;
+
+        &Item {
+            flex: 1;
+            height: 60px;
+            // box-shadow: $box-shadow;
+            text-align: center;
+            display: flex;
+            flex-flow: row nowrap;
+
+            &.betsNav {
+                background-color: $gray;
+            }
+
+            &.couponNav {
+                background-color: $orange;
+            }
+        }
+
+        &Text {
+            flex: 1 1 100%;
+            display: inline-block;
+            color: $white;
+            font-family: $font-family-roboto;
+            font-size: $base-font-size;
+            font-weight: bold;
+            line-height: 60px;
+        }
+
+        &Count {
+            flex: 1 1 50px;
+            display: inline-block;
+            color: $white;
+            font-family: $font-family-roboto;
+            font-size: $base-font-size;
+            font-weight: bold;
+            line-height: 60px;
+            opacity: 0.5;
+        }
+    }
+
+    @media #{$mobile-viewport} {
+        .support-btn {
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+
+        .footer__wrapper {
+            margin: 0;
+        }
+
+        .nav-link__item {
+            padding: 8px;
+        }
+
+        .links {
+            flex-flow: column;
+
+            &__items--support-btn {
+                text-align: center;
+            }
+        }
+    }
+
+    @media #{$md-viewport} {
+        .nav-link__item {
+            padding: 0;
+        }
+    }
+
+    @media #{$lg-viewport} {
+        padding: 30px 0;
+
+        .footer__wrapper {
+            margin: 0 30px;
+        }
+
+        .links {
+            flex-flow: row;
+
+            &__items--nav-links {
+                display: block;
+            }
+
+            &__items--support-btn {
+                text-align: right;
+            }
+        }
+    }
+
+    @media #{$xl-viewport} {
+        .footer__wrapper {
+            margin: 0 270px;
+        }
+    }
+}

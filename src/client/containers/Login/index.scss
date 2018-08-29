@@ -1,0 +1,63 @@
+@import "../../styles/utils";
+
+.loginComponent {
+    padding: 0 20px;
+
+    &Title {
+        margin-bottom: 20px;
+        color: $font-color;
+        font-family: $font-family-roboto;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    &Status {
+        color: red;
+        font-size: 12px;
+        word-wrap: break-word;
+    }
+
+    &Success {
+        color: green;
+    }
+}
+
+.socialLogin {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-between;
+
+    &Btn {
+        height: 44px;
+        width: 80px;
+        border-radius: 22px;
+        outline: none;
+        border: 1px solid transparent;
+        display: inline-block;
+        line-height: 42px;
+        background: transparent;
+        transition: all 0.4s ease;
+        cursor: pointer;
+        text-align: center;
+
+        &Google {
+            border-color: $red;
+            color: $red;
+        }
+
+        &Facebook {
+            border-color: $blue;
+            color: $blue;
+        }
+
+        &Steam {
+            border-color: $gray3C;
+            color: $gray3C;
+            cursor: not-allowed;
+        }
+
+        i {
+            font-size: 24px;
+        }
+    }
+}

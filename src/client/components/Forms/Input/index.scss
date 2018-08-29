@@ -1,0 +1,70 @@
+@import "./../../../styles/utils";
+
+.inputField {
+    position: relative;
+    margin-bottom: 20px;
+
+    &Input {
+        width: 100%;
+        height: 50px;
+        border: 1px solid $gray;
+        border-radius: 25px;
+        padding: 19px;
+        line-height: 48px;
+        outline: none;
+        color: $font-color;
+    }
+
+    span {
+        position: absolute;
+        font-size: 12px;
+        color: $red;
+        top: 100%;
+        width: 100%;
+        display: block;
+    }
+
+    &Check {
+        display: block;
+        opacity: 0;
+        width: 10px;
+        height: 13px;
+        fill: $orange;
+        position: absolute;
+        top: 4px;
+        left: 5px;
+        transition: 0.3s ease all;
+    }
+
+    &Label {
+        user-select: none;
+        cursor: pointer;
+    }
+
+    &Input + &Label::before {
+        content: '';
+        -webkit-appearance: none;
+        height: 20px;
+        width: 20px;
+        border: 2px solid $gray;
+        border-radius: 4px;
+        display: inline-block;
+        position: relative;
+    }
+
+    &Input:checked + &Label::before {
+        border-color: $orange;
+    }
+
+    &Input:checked + &Label {
+        .inputCheckboxCheck {
+            display: block;
+        }
+    }
+
+    &Input:checked + &Label {
+        .inputCheckboxCheck {
+            opacity: 1;
+        }
+    }
+}

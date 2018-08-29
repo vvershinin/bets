@@ -1,0 +1,25 @@
+@import "~semantic-ui-css/components/site.min.css";
+@import "./_variables.scss";
+
+body,
+html {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    color: $gray62;
+    font-family: $font-family-base;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.link {
+    color: $font-color;
+
+    &:hover {
+        color: rgba($font-color, 0.9);
+    }
+}

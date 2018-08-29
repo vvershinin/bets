@@ -1,0 +1,39 @@
+# IDEs
+/.idea
+/.project
+/nbproject
+/.buildpath
+/.settings
+*.sublime-*
+*.AppleDouble
+*.AppleDB
+*.AppleDesktop
+Temporary Items
+.apdisk
+GPATH
+GRTAGS
+GTAGS
+
+# OS
+.DS_Store
+
+.sass-cache
+/node_modules/
+
+# logs
+npm-debug.log
+
+# generated frontend files
+/**/public
+/tmp
+/dist
+/styleguide/dist
+
+# generated bamboo reports
+/reports/*
+
+#generated styleguide builds
+/styleguide/build
+
+/.env
+/build
